@@ -2,9 +2,9 @@
 # gradio
 # numpy
 # altair
-# tensorflow
+tensorflow
 mlflow==2.0.1
 gradio==3.13.0
 numpy==1.23.5
 altair==4.2.0
-tensorflow==2.10
+# tensorflow==2.10
