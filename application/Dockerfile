@@ -4,7 +4,7 @@ FROM registry.access.redhat.com/ubi9/python-39
 WORKDIR /tmp
 
 COPY . /tmp
-
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 ENV PYTHONUNBUFFERED=1
