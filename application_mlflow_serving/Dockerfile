@@ -4,6 +4,7 @@ WORKDIR /tmp
 
 COPY . /tmp
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 ENV GRADIO_SERVER_PORT=8080
