@@ -1,5 +1,5 @@
-# FROM python:3.10.4
-FROM registry.access.redhat.com/ubi9/python-39
+FROM python:3.10.4
+# FROM registry.access.redhat.com/ubi9/python-39
 
 WORKDIR /tmp
 
