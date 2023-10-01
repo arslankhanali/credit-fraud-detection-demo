@@ -27,10 +27,22 @@ def predict(distance_from_home,distance_from_last_transaction,ratio_to_median_pu
     headers = {
         'content-type': 'application/json'
     }
+    
+    print("=============START================")
+    print("URL is:", URL)
+    
+    response = requests.get(URL)
+    # Check if the status code is in the 200 range to indicate success
+    if 200 <= response.status_code < 300:
+        print(f'Success! Status code: {response.status_code}')
+    else:
+        print(f'Request failed with status code: {response.status_code}')
+
+
 
     response = requests.post(URL, json=payload, headers=headers)
     print(response.json())
-    print("=============================")
+    print("=============STOP================")
     prediction = response.json()['outputs'][0]['data'][0]
 
     return "Fraud" if prediction >=0.995 else "Not fraud"
